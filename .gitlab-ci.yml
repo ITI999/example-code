@@ -1,0 +1,9 @@
+image: t1group/dind-ci-image:latest
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - echo "build triggered"

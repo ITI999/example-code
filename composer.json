@@ -1,0 +1,46 @@
+{
+    "name": "t1-group/geo-proxy",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "laravel/lumen-framework": "^9.0",
+        "t1-group/rnis-common": "^1.0.6"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.4.4",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "gitlab-domains": ["git-02.t1-group.ru"]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "git-02.t1-group.ru/37": {
+            "type": "composer",
+            "url": "https://git-02.t1-group.ru/api/v4/group/37/-/packages/composer/packages.json"
+        }
+    }
+}
